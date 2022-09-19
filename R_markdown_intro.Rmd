@@ -1,0 +1,38 @@
+---
+title: "Intro_markdown"
+output: html_document
+---
+
+```{r setup, include=FALSE, message = FALSE}
+library(tidyverse)
+```
+
+## R Markdown
+
+**bold** *italic*
+
+```{r cars}
+summary(cars)
+```
+
+The mean in `r(mean(samp))`
+
+## This is going to make a plot
+
+```{r}
+plot_df = tibble(
+  x= rnorm(n = 100),
+  y = 1 + 2 * x + rnorm(n=100)
+)
+ggplot(plot_df, aes(x = x)) + geom_histogram()
+```
+
+```{r learning_assessment_chunk}
+df1 = tibble(
+  x = rnorm(n = 500, mean = 1), 
+  y = x > 0,
+  z = abs(x)
+)
+
+ggplot(df1, aes(x =x)) + geom_histogram()
+```
