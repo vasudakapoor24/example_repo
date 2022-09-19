@@ -27,12 +27,3 @@ plot_df = tibble(
 ggplot(plot_df, aes(x = x)) + geom_histogram()
 ```
 
-```{r learning_assessment_chunk}
-df1 = tibble(
-  x = rnorm(n = 500, mean = 1), 
-  y = x > 0,
-  z = abs(x)
-)
-
-ggplot(df1, aes(x =x)) + geom_histogram()
-```
